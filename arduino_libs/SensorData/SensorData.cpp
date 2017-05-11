@@ -1,13 +1,14 @@
-#include StackRegister.h
+#include SensorData.h
 
-StackRegister::StackRegister(byte dataType, byte data[6]) {
+SensorData::SensorData(byte dataType, byte data[6]) {
 		_dataType = dataType;
 		_data = data;
 }
 
-StackRegister::print() {
+SensorData::print() {
 	
 	String _registerString;
+	
 	switch (_dataType) {
 	    case 0:    // RTC data (timestamp) - 4 Bytes
 			// Here the code to convert the byte-data to string

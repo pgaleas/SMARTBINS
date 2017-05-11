@@ -1,0 +1,301 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "SensorData/SensorData.h",
+			"settings":
+			{
+				"buffer_size": 480,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorData",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorsQueue"
+	],
+	"file_history":
+	[
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorsQueue/SensorsQueue.h",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorData/SensorData.h",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorsQueue/keywords.txt",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorData.cpp",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorData.h",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/keywords.txt",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorsQueue.h",
+		"/Users/patricio/Documents/Arduino/libraries/Morse/Morse.h",
+		"/Users/patricio/Documents/Arduino/libraries/Morse/Morse.cpp",
+		"/Users/patricio/Documents/Arduino/libraries/Fader/keywords.txt",
+		"/Users/patricio/Documents/Arduino/libraries/Fader/Fader.h",
+		"/Users/patricio/Documents/Arduino/libraries/Fader/Fader.cpp",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/SensorsStack.h",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/StackRegister.cpp",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/StackRegister.h",
+		"/Users/patricio/Documents/github/SMARTHARVEST/arduino_libs/README.md",
+		"/Users/patricio/Desktop/smartharvest_libs/StackRegister.cpp",
+		"/Users/patricio/Desktop/smartharvest_libs/StackRegister.h",
+		"/Users/patricio/Desktop/smartharvest_libs/SensorsStack.h",
+		"/Users/patricio/Desktop/smartharvest_libs/SensorsStack.cpp",
+		"/Users/patricio/Documents/github/ice-demos/java/IceStorm/weather/Weather.ice",
+		"/Users/patricio/Documents/github/ice-demos/java/Freeze/casino/CasinoStore.ice",
+		"/Users/patricio/Google Drive/UFRO/ASIGNATURAS/ED-CC/books/lafore/InstructorFiles/Chap05/CircList/circList.java",
+		"/Users/patricio/Google Drive/UFRO/ASIGNATURAS/ED-CC/books/lafore/ReaderFiles/Chap05/linkList/linkList.java",
+		"/Users/patricio/Documents/github/ice-demos/java/IceStorm/clock/Publisher.java",
+		"/Users/patricio/Documents/github/ice-demos/java/IceStorm/clock/Clock.ice",
+		"/Users/patricio/Documents/github/ice-demos/java/IceStorm/clock/build.gradle",
+		"/Users/patricio/Documents/github/ice-demos/java/IceStorm/clock/Subscriber.java",
+		"/Users/patricio/Documents/ejemplos_ice/Client.java",
+		"/Users/patricio/Downloads/Server.py",
+		"/Users/patricio/Documents/ejemplos_ice/Printer.ice",
+		"/Users/patricio/Documents/ejemplos_ice/Server.config",
+		"/Users/patricio/Documents/ejemplos_ice/Example/PrinterI.java",
+		"/Users/patricio/Documents/ejemplos_ice/Server.java",
+		"/Users/patricio/Documents/ejemplos_ice/Example/Printer.java",
+		"/Users/patricio/Documents/ejemplos_ice/Example/_PrinterDisp.java",
+		"/Users/patricio/Downloads/WorkshopApplets 4/Chap02/Array/Array.html",
+		"/Users/patricio/Downloads/IEEEtranBST/IEEEexample.bib",
+		"/Users/patricio/Downloads/papers_radiomap.bib",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/java/Server.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/java/Server.config",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/java/Printer.ice",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/java/Makefile",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/java/Client.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Example/PrinterI.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Example/Printer.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Makefile",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Client.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Server.config",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Printer.ice",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Server.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Example/_PrinterDisp.java",
+		"/Users/patricio/Documents/github/DISPROG-COURSE/code/ice/holamundo/Makefile.make",
+		"/Users/patricio/Documents/haskell_examples/baby.hs",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/IceGridTest/node2.config",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/IceGridTest/node1.config",
+		"/Users/patricio/Google Drive/PROYECTOS/IOT/SMART-HARVESTING/admin/Cta. Corriente Proyecto",
+		"/Volumes/EV3DEV_BOOT/config.txt",
+		"/Users/patricio/Desktop/clientes.json",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Printer_ice.py",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Server.py",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Client.py",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Printer.ice",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Server.config",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Example/__init__.py",
+		"/Users/patricio/Google Drive/PROYECTOS/ASTROINGENIERIA/CURSO PROGRAMACIÓN DISTRIBUIDA/Ice/Ice-development/python/Demo/__init__.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SensorsStack_h",
+			"StackRegister",
+			"stack",
+			"StackRegister",
+			"SensorsStack",
+			"Fader",
+			"convert",
+			"Here the code to convert to string",
+			"numeric",
+			"String",
+			"d",
+			"Byte",
+			"(\n",
+			"Byte",
+			"step",
+			"Clock",
+			"demoIceAsync"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Byte"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "SensorData/SensorData.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 0.0
+	},
+	"output.stino_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "arduino_libs.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

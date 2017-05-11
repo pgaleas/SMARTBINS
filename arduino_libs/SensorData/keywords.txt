@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
  
-StackRegister	KEYWORD1
+SensorData	KEYWORD1
  
 #######################################
 # Methods and Functions (KEYWORD2)
