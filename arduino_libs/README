@@ -1,1 +1,2 @@
-Esta es la librería en C++ para controlar los distintos tipos de sensores del prototipo
+Esta es la librería en C++ para ARduino que maneja los datos capturados desde distintos tipos de sensores del prototipo SMARTHARVEST
+del proyecto FONDEF ID16I10206 de la Universidad de La Frontera.
