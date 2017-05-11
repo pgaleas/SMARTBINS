@@ -11,12 +11,11 @@
 Class SensorData {
 	
 	public:
-		Boolean _data_transmitted = false; //true if the register is already stored or transmitted
-		SensorData(byte dataType, byte data[6]); // Constructor
+		SensorData(char dataType, char data[6]); // Constructor
 		void print();
 
 	private:
-		byte _dataType;
-		byte _data[6];
+		char _dataType;
+		char _data[6];
 		
 };

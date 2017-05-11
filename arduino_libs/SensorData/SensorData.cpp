@@ -6,7 +6,7 @@
 
 #include SensorData.h
 
-SensorData::SensorData(byte dataType, byte data[6]) {
+SensorData::SensorData(char dataType, char data[6]) {
 		_dataType = dataType;
 		_data = data;
 }
