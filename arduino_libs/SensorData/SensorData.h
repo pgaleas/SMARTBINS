@@ -7,6 +7,7 @@
 #define SensorData_h
 
 // This change is to test the branches
+// Hier ist a second change
 
 #include <Arduino.h>
 
