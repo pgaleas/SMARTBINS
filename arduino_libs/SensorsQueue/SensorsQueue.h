@@ -23,19 +23,26 @@ Class SensorsQueue {
 
 		int getBufferSize(); // Get the actual size of _bufferSize
 
-		void push(SensorData data); // Add one register to the queue
+		void push(char sensorType, float data); // Add one float value to the queue
 
-		SensorData pop(); // Get the last register from the queque
+		void push(char sensorType, float data[]); // Add one float array to the queue
 
-		SensorData[] nPop(); // Get the data contained in _bufferQueueArray, corresponding to the last _bufferSize registers from _sensorQueueArray
+		void push(char sensorType, long data); // Add one long value to the queue
+
+		void push(char sensorType, time_t data); // Add one time_t value to the queue
+
+		SensorData[] popBuffer(); // Get the data contained in _bufferQueueArray, corresponding to the last _bufferSize registers from _sensorQueueArray
+
+		String popBufferAsString(); // Get the data contained in _bufferQueueArray in string format, corresponding to the last _bufferSize registers from _sensorQueueArray
+
 
 	private:
 
 		int _bufferSize; // Define the number of register to be loaded in the buffer for future transmition. 
 
-		QueueArray _sensorQueueArray; // Queue containing the actual stored sensor data
+		QueueArray _sensorsQueue; // Queue containing the actual stored sensors data
 
-		QueueArray _bufferQueueArray; // Queue containing the data to be transmitted
+		QueueArray _bufferQueue; // Queue containing the data to be transmitted
 
 		void loadBuffer(); // Moves _bufferSize elements from _sensorQueueArray to _bufferQueueArray
 

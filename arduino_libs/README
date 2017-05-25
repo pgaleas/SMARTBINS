@@ -1,2 +1,10 @@
 Esta es la librería en C++ para ARduino que maneja los datos capturados desde distintos tipos de sensores del prototipo SMARTHARVEST
 del proyecto FONDEF ID16I10206 de la Universidad de La Frontera.
+
+
+Asume el uso de las siguientes librerias
+
+- RTC para Teensy: https://github.com/PaulStoffregen/Time  
+- IMU (MPU9250) : https://github.com/bolderflight/MPU9250
+- Temperatura (DS18B20) : https://github.com/nettigo/DS18B20
+- Peso (HX711) : https://github.com/bogde/HX711

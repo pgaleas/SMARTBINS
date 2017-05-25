@@ -3,6 +3,15 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "SensorData"
+		},
+		{
+			"path": "SensorsQueue"
+		},
+		{
+			"path": "docs"
 		}
 	]
 }
