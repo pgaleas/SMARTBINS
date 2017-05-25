@@ -10,9 +10,11 @@ char _data[6];
 char _sensorMetaData;
 
 /* Constructor for time_t data (Example: RTC) */
-SensorData::SensorData(char sensorType, time_t t) {
+SensorData::SensorData(char sensorType, char counter, time_t t) {
 		
 		_dataType = 0; // corresponding to time_t
+
+		_counter = counter;
 
 		_sensorMetaData = sensorType; // no shiftting / "or" are necessary
 
@@ -23,9 +25,11 @@ SensorData::SensorData(char sensorType, time_t t) {
 }
 
 /* Constructor for int16_t (array) data (Example: IMU) */
-SensorData::SensorData(char sensorType, int16_t i1, int16_t i2, int16_t i3) {
+SensorData::SensorData(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3) {
 		
 		_dataType = 1; // corresponding to int16_t
+
+		_counter = counter;
 
 		_sensorMetaData = _dataType << 4 | sensorType;
 		
@@ -38,9 +42,11 @@ SensorData::SensorData(char sensorType, int16_t i1, int16_t i2, int16_t i3) {
 }
 
 /* Constructor for float data (Example: Temperature) */
-SensorData::SensorData(char sensorType, float f) {
+SensorData::SensorData(char sensorType, char counter, float f) {
 		
 		_dataType = 2; // corresponding to float
+
+		_counter = counter;
 
 		_sensorMetaData = _dataType << 4 | sensorType;
 		
@@ -51,9 +57,11 @@ SensorData::SensorData(char sensorType, float f) {
 }
 
 /* Constructor for long data (Example: Weight) */
-SensorData::SensorData(char sensorType, long l) {
+SensorData::SensorData(char sensorType, char counter, long l) {
 		
 		_dataType = 3; // corresponding to long
+
+		_counter = counter;
 
 		_sensorMetaData = _dataType << 4 | sensorType;
 		

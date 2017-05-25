@@ -8,20 +8,21 @@
 
 #include <Arduino.h>
 
-Class SensorData {
+class SensorData 
+{
 	
 	public:
 		/* Constructor for time_t data (Example: RTC) */
 		SensorData(char sensorType, char counter, time_t t);
 
 		/* Constructor for int16_t (array) data (Example: IMU) */
-		SensorData(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3)
+		SensorData(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3);
 
 		/* Constructor for float data (Example: Temperature) */
-		SensorData(char sensorType, char counter, float f)
+		SensorData(char sensorType, char counter, float f);
 
 		/* Constructor for long data (Example: Weight) */
-		SensorData(char sensorType, char counter, long l)
+		SensorData(char sensorType, char counter, long l);
 
 		/* Print the sensor data and datatype */
 		void print(); // 
@@ -42,7 +43,7 @@ Class SensorData {
 			010 : Temperature
 			011 : Weight
 		*/
-		char _sensorMetaData
+		char _sensorMetaData;
 
 		/*
 		This value will be used to get how (sequence)
@@ -66,3 +67,5 @@ Class SensorData {
 		char _data[6];
 		
 };
+
+#endif
