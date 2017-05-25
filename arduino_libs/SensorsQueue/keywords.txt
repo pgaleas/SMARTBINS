@@ -12,9 +12,15 @@ SensorsQueue	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
  
-print	KEYWORD2
-push	KEYWORD2
-pop		KEYWORD2
+setBufferSize		KEYWORD2
+increaseBufferSize	KEYWORD2
+decreaseBufferSize	KEYWORD2
+getBufferSize		KEYWORD2
+push				KEYWORD2
+popBuffer			KEYWORD2
+popBufferAsString	KEYWORD2
+printBuffer			KEYWORD2
+loadBuffer			KEYWORD2
  
 #######################################
 # Constants (LITERAL1)

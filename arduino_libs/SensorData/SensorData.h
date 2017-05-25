@@ -12,16 +12,16 @@ Class SensorData {
 	
 	public:
 		/* Constructor for time_t data (Example: RTC) */
-		SensorData(char sensorType, char counter, time_t time);
+		SensorData(char sensorType, char counter, time_t t);
 
 		/* Constructor for int16_t (array) data (Example: IMU) */
-		SensorData(char sensorType, char counter, int16_t ax, int16_t ay, int16_t az)
+		SensorData(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3)
 
 		/* Constructor for float data (Example: Temperature) */
-		SensorData(char sensorType, char counter, float temperature)
+		SensorData(char sensorType, char counter, float f)
 
 		/* Constructor for long data (Example: Weight) */
-		SensorData(char sensorType, char counter, long weight)
+		SensorData(char sensorType, char counter, long l)
 
 		/* Print the sensor data and datatype */
 		void print(); // 
@@ -30,13 +30,13 @@ Class SensorData {
 		/* _sensorMetaData contains two values: (1) a code of 4 bits for the type of the data returned by the sensor
 		and (2) a code of 4 bits to identify the type of sensor. 
 		The total of 8 bits will be devided in:
-		4 (left) bits for the dataType (mask = F0 or 11110000): .
+		4 (left) bits for the dataType (mask = 0xF0 or 11110000): .
 			000 : time_t
 			001 : int16_t
 			010 : float
 			011 : long
 
-		4 (right) bits for sensorType (mask = F or 00001111):
+		4 (right) bits for sensorType (mask = 0xF or 00001111):
 			000 : Timestamp
 			001 : IMU
 			010 : Temperature

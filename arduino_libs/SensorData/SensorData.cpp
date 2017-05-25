@@ -93,7 +93,6 @@ SensorData::print() {
 			Para esto podriamos implementar un nuevo metodo:
 			void MPU9250::getAccel_Raw(int16_t* ax, int16_t* ay, int16_t* az)
 			*/
-
 	    	int16_t ax = (((int16_t)_data[0]) << 8) | (int16_t)_data[1]; 
 	    	int16_t ay = (((int16_t)_data[2]) << 8) | (int16_t)_data[3];
 	    	int16_t az = (((int16_t)_data[4]) << 8) | (int16_t)_data[5];

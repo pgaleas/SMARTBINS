@@ -38,30 +38,35 @@ int SensorQueue::getBufferSize(){
 
 /* Add one time_t value to the queue */
 void SensorQueue::push(char sensorType, char counter, time_t data){
-	SensorData register = new SensorData(sensorType, counter, data);
-	_sensorQueueArray.push(register);
+	SensorData sData (sensorType, counter, data);
+	_sensorQueueArray.push(sData);
 }
 
 /* Add one int16_t array to the queue */
 void SensorQueue::push(char sensorType, char counter, int16_t data0, int16_t data1, int16_t data2){
-	SensorData register = new SensorData(sensorType, counter, data0, data1, data2);
-	_sensorQueueArray.push(register);
+	SensorData sData (sensorType, counter, data0, data1, data2);
+	_sensorQueueArray.push(sData);
 } 
 
 /* Add one float value to the queue */
 void SensorQueue::push(char sensorType, char counter, float data){
-	SensorData register = new SensorData(sensorType, counter, data);
-	_sensorQueueArray.push(register);
+	SensorData sData (sensorType, counter, data);
+	_sensorQueueArray.push(sData);
 } 
 
 
 
 /* Add one long value to the queue */
 void SensorQueue::push(char sensorType, char counter, long data){
-	SensorData register = new SensorData(sensorType, counter, data);
-	_sensorQueueArray.push(register);
+	SensorData sData (sensorType, counter, data);
+	_sensorQueueArray.push(sData);
 }
 
+/* Moves _bufferSize elements 
+from _sensorQueueArray to _bufferQueueArray */
+void SensorQueue::loadBuffer(){
+
+} 
 
 /* Get the data contained in _bufferQueueArray, 
 corresponding to the last _bufferSize registers 
@@ -72,14 +77,16 @@ SensorData[] SensorQueue::popBuffer(){
 
 /* Get the data contained in _bufferQueueArray in string format, 
 corresponding to the last _bufferSize registers from _sensorQueueArray */
-String popBufferAsString() {
+String SensorQueue::popBufferAsString() {
 
 }  
 
-		
-/* Moves _bufferSize elements 
-from _sensorQueueArray to _bufferQueueArray */
-void SensorQueue::loadBuffer(){
+/* Print the data contained in _bufferQueueArray, 
+corresponding to the last _bufferSize registers 
+from _sensorQueueArray */
+SensorData[] SensorQueue::printBuffer(){
 
-} 
+}
+		
+
 
