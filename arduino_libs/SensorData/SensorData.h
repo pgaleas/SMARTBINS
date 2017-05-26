@@ -8,7 +8,7 @@
 
 #include <Arduino.h>
 
-Class SensorData {
+class SensorData {
 	
 	public:
 		/* Constructor for time_t data (Example: RTC) */

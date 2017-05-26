@@ -9,44 +9,64 @@
 #include <Arduino.h>
 #include <QueueArray.h>
 
-Class SensorsQueue {
+class SensorsQueue {
 	
 	public:
 		
-		SensorsQueue(int bufferSize); // Constructor 
+		// Constructor 
+		SensorsQueue(int bufferSize); 
 
-		void setBufferSize(int newBufferSize); // Define the size of the data set to be loaded in the (transmition) buffer
+		/* Define the size of the data set to be loaded 
+		in the (transmition) buffer */
+		void setBufferSize(int newBufferSize); 
 
-		void increaseBufferSize(); // Increase _bufferSize in one register.
+		// Increase _bufferSize in one register.
+		void increaseBufferSize(); 
 
-		void decreaseBufferSize(); // Decrease _bufferSize in one register.
+		// Decrease _bufferSize in one register.
+		void decreaseBufferSize(); 
 
-		int getBufferSize(); // Get the actual size of _bufferSize
+		// Get the actual size of _bufferSize
+		int getBufferSize(); 
 
-		void push(char sensorType, float data); // Add one float value to the queue
+		// Add one float value to the queue
+		void push(char sensorType, float data); 
 
-		void push(char sensorType, float data[]); // Add one float array to the queue
+		// Add one float array to the queue
+		void push(char sensorType, float data[]); 
 
-		void push(char sensorType, long data); // Add one long value to the queue
+		// Add one long value to the queue
+		void push(char sensorType, long data); 
 
-		void push(char sensorType, time_t data); // Add one time_t value to the queue
+		// Add one time_t value to the queue
+		void push(char sensorType, time_t data); 
 
-		SensorData[] popBuffer(); // Get the data contained in _bufferQueueArray, corresponding to the last _bufferSize registers from _sensorQueueArray
+		/* Get the data contained in _bufferQueueArray, 
+		corresponding to the last _bufferSize registers 
+		from _sensorQueueArray */
+		SensorData[] popBuffer(); 
 
-		String popBufferAsString(); // Get the data contained in _bufferQueueArray in string format, corresponding to the last _bufferSize registers from _sensorQueueArray
+		/* Get the data contained in _bufferQueueArray 
+		in string format, corresponding to the 
+		last _bufferSize registers from _sensorQueueArray */
+		String popBufferAsString(); 
 
 
 	private:
+		/* Define the number of register to be loaded 
+		in the buffer for future transmition. */
+		int _bufferSize; 
 
-		int _bufferSize; // Define the number of register to be loaded in the buffer for future transmition. 
+		/* Queue containing the actual stored sensors data */
+		QueueArray _sensorsQueue; 
 
-		QueueArray _sensorsQueue; // Queue containing the actual stored sensors data
+		/* Queue containing the data to be transmitted */
+		QueueArray _bufferQueue; 
 
-		QueueArray _bufferQueue; // Queue containing the data to be transmitted
-
-		void loadBuffer(); // Moves _bufferSize elements from _sensorQueueArray to _bufferQueueArray
+		/* Moves _bufferSize elements from _sensorQueueArray 
+		to _bufferQueueArray */
+		void loadBuffer(); 
 
 
 }
-
 #endif

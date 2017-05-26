@@ -15,7 +15,8 @@ SensorQueue::SensorQueue(int bufferSize) {
 	QueueArray <SensorData> _bufferQueue;
 }
 
-/* Define the size of the data set to be loaded in the (transmition) buffer */
+/* Define the size of the data set to be loaded in 
+the (transmition) buffer */
 void SensorQueue::setBufferSize(int newBufferSize) {
 	_bufferSize = bufferSize;
 }
