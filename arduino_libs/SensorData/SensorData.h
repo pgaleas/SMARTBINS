@@ -15,16 +15,16 @@ class SensorData {
 		SensorData();
 		
 		/* Constructor for time_t data (Example: RTC) */
-		SetTimeData(char sensorType, char counter, time_t t);
+		void SetTimeData(char sensorType, char counter, time_t t);
 
 		/* Constructor for int16_t (array) data (Example: IMU) */
-		SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3);
+		void SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3);
 
 		/* Constructor for float data (Example: Temperature) */
-		SetFloatData(char sensorType, char counter, float f);
+		void SetFloatData(char sensorType, char counter, float f);
 
 		/* Constructor for long data (Example: Weight) */
-		SetLongData(char sensorType, char counter, long l);
+		void SetLongData(char sensorType, char counter, long l);
 
 		/* Print the sensor data and datatype */
 		void print(); // 

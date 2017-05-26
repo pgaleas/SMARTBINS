@@ -17,7 +17,7 @@ SensorData::SensorData() {
 
 
 /* Set time_t data (Example: RTC) */
-SensorData::SetTimeData(char sensorType, char counter, time_t t) {
+void SensorData::SetTimeData(char sensorType, char counter, time_t t) {
 		
 		_dataType = 0; // corresponding to time_t
 
@@ -32,7 +32,7 @@ SensorData::SetTimeData(char sensorType, char counter, time_t t) {
 }
 
 /* Set int16_t (array) data (Example: IMU) */
-SensorData::SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3) {
+void SensorData::SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3) {
 		
 		_dataType = 1; // corresponding to int16_t
 
@@ -49,7 +49,7 @@ SensorData::SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, 
 }
 
 /* Set float data (Example: Temperature) */
-SensorData::SetFloatData(char sensorType, char counter, float f) {
+void SensorData::SetFloatData(char sensorType, char counter, float f) {
 		
 		_dataType = 2; // corresponding to float
 
@@ -64,7 +64,7 @@ SensorData::SetFloatData(char sensorType, char counter, float f) {
 }
 
 /* Set long data (Example: Weight) */
-SensorData::SetLongData(char sensorType, char counter, long l) {
+void SensorData::SetLongData(char sensorType, char counter, long l) {
 		
 		_dataType = 3; // corresponding to long
 
@@ -79,7 +79,7 @@ SensorData::SetLongData(char sensorType, char counter, long l) {
 }
 
 /* Print the sensor data and datatypeAndCounte */
-SensorData::print() {
+void SensorData::print() {
 	
 	String _registerString;
 	int8_t _dataType;
