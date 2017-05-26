@@ -18,13 +18,13 @@ Class SensorData {
 		SetTimeData(char sensorType, char counter, time_t t);
 
 		/* Constructor for int16_t (array) data (Example: IMU) */
-		SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3)
+		SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3);
 
 		/* Constructor for float data (Example: Temperature) */
-		SetFloatData(char sensorType, char counter, float f)
+		SetFloatData(char sensorType, char counter, float f);
 
 		/* Constructor for long data (Example: Weight) */
-		SetLongData(char sensorType, char counter, long l)
+		SetLongData(char sensorType, char counter, long l);
 
 		/* Print the sensor data and datatype */
 		void print(); // 
@@ -45,7 +45,7 @@ Class SensorData {
 			010 : Temperature
 			011 : Weight
 		*/
-		char _sensorMetaData
+		char _sensorMetaData;
 
 		/*
 		This value will be used to get how (sequence)
@@ -69,3 +69,4 @@ Class SensorData {
 		char _data[6];
 		
 };
+#endif
