@@ -12,7 +12,11 @@ SensorData	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
  
-print	KEYWORD2
+SetTimeData		KEYWORD2
+SetInt16Data	KEYWORD2
+SetFloatData	KEYWORD2
+SetLongData		KEYWORD2
+print			KEYWORD2
  
 #######################################
 # Constants (LITERAL1)

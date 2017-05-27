@@ -4,10 +4,10 @@
   Created by Patricio Galeas, May 10, 2017.
 */
 
-#include SensorData.h
+#include "SensorData.h"
 
-char _data[6];
-char _sensorMetaData;
+int8_t _data[6];
+int8_t _sensorMetaData;
 
 
 /* Constructor */
@@ -17,9 +17,9 @@ SensorData::SensorData() {
 
 
 /* Set time_t data (Example: RTC) */
-void SensorData::SetTimeData(char sensorType, char counter, time_t t) {
+void SensorData::SetTimeData(int8_t sensorType, int8_t counter, time_t t) {
 		
-		_dataType = 0; // corresponding to time_t
+		//int8_t _dataType = 0; corresponding to time_t (not used in this case)
 
 		_counter = counter;
 
@@ -32,9 +32,9 @@ void SensorData::SetTimeData(char sensorType, char counter, time_t t) {
 }
 
 /* Set int16_t (array) data (Example: IMU) */
-void SensorData::SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3) {
+void SensorData::SetInt16ArrayData(int8_t sensorType, int8_t counter, int16_t i1, int16_t i2, int16_t i3) {
 		
-		_dataType = 1; // corresponding to int16_t
+		int8_t _dataType = 1; // corresponding to int16_t
 
 		_counter = counter;
 
@@ -49,24 +49,23 @@ void SensorData::SetInt16Data(char sensorType, char counter, int16_t i1, int16_t
 }
 
 /* Set float data (Example: Temperature) */
-void SensorData::SetFloatData(char sensorType, char counter, float f) {
+void SensorData::SetInt16Data(int8_t sensorType, int8_t counter, int16_t i) {
 		
-		_dataType = 2; // corresponding to float
+		int8_t _dataType = 2; // corresponding to float
 
 		_counter = counter;
 
 		_sensorMetaData = _dataType << 4 | sensorType;
 		
-		_data[0] = f >> 24;
-		_data[1] = f >> 16;
-		_data[2] = f >> 8;
-		_data[3] = f;
+		_data[0] = i >> 8;
+		_data[1] = i;
+
 }
 
 /* Set long data (Example: Weight) */
-void SensorData::SetLongData(char sensorType, char counter, long l) {
+void SensorData::SetLongData(int8_t sensorType, int8_t counter, long l) {
 		
-		_dataType = 3; // corresponding to long
+		int8_t _dataType = 3; // corresponding to long
 
 		_counter = counter;
 
@@ -86,16 +85,20 @@ void SensorData::print() {
 
 	/* Filtering the _dataType from the first 4 bits of _sensorMetaData 
 	using the mask (11110000) and shifting */ 
-	_dataType = (int8_t)((_sensorMetaData & 0xF0) >> 4) 
+	_dataType = (int8_t)((_sensorMetaData & 0xF0) >> 4);
 	
 	switch (_dataType) {
-	    case 0:    // RTC data (timestamp) - 4 Bytes
+	    case 0: {
+	    	// RTC data (timestamp) - 4 Bytes
 			// Here the reconstruct the time value from the byte array (_data)
-	    	time_c t = (((time_c)_data[0]) << 24) | (((time_c)_data[1]) << 16) | (((time_c)_data[2]) << 8) | (time_c)_data[3];
-	    	Serial.println("time:" + t + "\n"); 
+	    	time_t time = (((time_t)_data[0]) << 24) | (((time_t)_data[1]) << 16) | (((time_t)_data[2]) << 8) | (time_t)_data[3];
+	    	Serial.println("time: ");
+	    	Serial.println(time, DEC);
+	    	Serial.println("\n"); 
 			break;
-
-	    case 1: // IMU data - 6 Bytes (1 Byte each axis)
+		}
+	    case 1: {
+	    	// IMU data - 6 Bytes (1 Byte each axis)
 			// Here the reconstruct the time value from the byte array (_data)
 	    	
 			/* Dado que que en 
@@ -111,20 +114,33 @@ void SensorData::print() {
 	    	int16_t ax = (((int16_t)_data[0]) << 8) | (int16_t)_data[1]; 
 	    	int16_t ay = (((int16_t)_data[2]) << 8) | (int16_t)_data[3];
 	    	int16_t az = (((int16_t)_data[4]) << 8) | (int16_t)_data[5];
-	    	Serial.println("ax:" + ax + " ay:" + ay + " az:" + az + "\n");
+	    	Serial.println("ax:");
+	    	Serial.println(ax, DEC);
+	    	Serial.println(" ay:");
+	    	Serial.println(ay, DEC);
+	    	Serial.println(" az:");
+	    	Serial.println(az, DEC);
+	    	Serial.println("\n");
 			break;
-
-	    case 2: // TEMPERATURE data - 4 Bytes (float)
+		}
+	    case 2: {
+	    	// TEMPERATURE data - 4 Bytes (int16_t)
 			// Here the reconstruct the time value from the byte array (_data)
-	    	float temperature = (((float)_data[0]) << 24) | (((float)_data[1]) << 16) | (((float)_data[2]) << 8) | (float)_data[3];
-	    	Serial.println("temperature: " + temperature + "\n"); 
+	    	float temperature = (((int16_t)_data[0]) << 8) | (int16_t)_data[1];
+	    	Serial.println("temperature: ");
+	    	Serial.println(temperature, DEC);
+	    	Serial.println("\n"); 
 	    	break;
-
-	    case 3: // WEIGHT data - 4 Bytes (float)
+	    }
+	    case 3: {
+	    	// WEIGHT data - 4 Bytes (long)
 			// Here the reconstruct the time value from the byte array (_data)
 	    	long weight = (((long)_data[0]) << 24) | (((long)_data[1]) << 16) | (((long)_data[2]) << 8) | (long)_data[3];
-	    	Serial.println("weight: " + weight + "\n"); 
+	    	Serial.println("weight: ");
+	    	Serial.println(weight, DEC);
+	    	Serial.println("\n"); 
 	    	break;
+	    }
 	}
 }
 

@@ -14,17 +14,17 @@ class SensorData {
 		/* Constructor for time_t data (Example: RTC) */
 		SensorData();
 		
-		/* Constructor for time_t data (Example: RTC) */
-		void SetTimeData(char sensorType, char counter, time_t t);
+		/* Set time_t data (Example: RTC) */
+		void SetTimeData(int8_t sensorType, int8_t counter, time_t t);
 
-		/* Constructor for int16_t (array) data (Example: IMU) */
-		void SetInt16Data(char sensorType, char counter, int16_t i1, int16_t i2, int16_t i3);
+		/* Set int16_t (array) data (Example: IMU) */
+		void SetInt16ArrayData(int8_t sensorType, int8_t counter, int16_t i1, int16_t i2, int16_t i3);
 
-		/* Constructor for float data (Example: Temperature) */
-		void SetFloatData(char sensorType, char counter, float f);
+		/* Set int16_t data (Example: Temperature) */
+		void SetInt16Data(int8_t sensorType, int8_t counter, int16_t i);
 
-		/* Constructor for long data (Example: Weight) */
-		void SetLongData(char sensorType, char counter, long l);
+		/* Set long data (Example: Weight) */
+		void SetLongData(int8_t sensorType, int8_t counter, long l);
 
 		/* Print the sensor data and datatype */
 		void print(); // 
@@ -45,12 +45,12 @@ class SensorData {
 			010 : Temperature
 			011 : Weight
 		*/
-		char _sensorMetaData;
+		int8_t _sensorMetaData;
 
 		/*
 		This value will be used to get how (sequence)
 		 each data register was inserted in the SensorQueue.*/
-		char _counter;
+		int8_t _counter;
 
 
 		/* Sensor data 
@@ -66,7 +66,7 @@ class SensorData {
 		Weight : The weight sensor returns a long (4bytes). It will be also codified 
 		into 4 bytes.
 		*/
-		char _data[6];
+		int8_t _data[6];
 		
 };
 #endif
